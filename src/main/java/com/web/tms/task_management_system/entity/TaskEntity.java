@@ -26,12 +26,19 @@ public class TaskEntity {
     @Column(nullable = false)
     private TaskStatus status;
 
+
+
     public TaskEntity(Long id, String title, String description, LocalDate dueDate, TaskStatus status) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.status = status;
+
+    }
+
+    public TaskEntity() {
+
     }
 
     public void setId(Long id) {
@@ -73,4 +80,5 @@ public class TaskEntity {
     public void setStatus(TaskStatus status) {
         this.status = status;
     }
+
 }
